@@ -14,7 +14,7 @@ export default function MemberExperience() {
         <SectionHeader title="Benefits for Employees" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, idx) => (
-            <div key={idx} className="p-8 bg-dark-card border border-dark-border rounded-lg hover:border-accent-teal transition-all duration-200">
+            <div key={idx} className="p-8 bg-dark-card border border-dark-border rounded-lg hover:border-accent-gold transition-all duration-200">
               <h3 className="text-lg font-bold text-text-primary mb-4">{benefit.title}</h3>
               <p className="text-text-secondary leading-relaxed">{benefit.description}</p>
             </div>

@@ -16,8 +16,8 @@ export default function HowItWorks() {
           {steps.map((step, idx) => (
             <div key={idx} className="relative">
               <div className="flex items-center justify-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-accent-blue to-accent-teal rounded-full flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">{step.number}</span>
+                <div className="w-16 h-16 bg-gradient-to-br from-accent-gold to-accent-gold-hover rounded-full flex items-center justify-center">
+                  <span className="text-2xl font-bold text-dark-bg">{step.number}</span>
                 </div>
               </div>
               <h3 className="text-xl font-bold text-text-primary mb-4 text-center">{step.title}</h3>

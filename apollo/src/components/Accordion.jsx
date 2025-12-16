@@ -14,7 +14,7 @@ export default function Accordion({ items }) {
             <h3 className="text-lg font-semibold text-text-primary text-left">
               {item.title}
             </h3>
-            <span className={`text-accent-blue text-2xl transition-transform duration-200 ${openIdx === idx ? 'rotate-180' : ''}`}>
+            <span className={`text-accent-gold text-2xl transition-transform duration-200 ${openIdx === idx ? 'rotate-180' : ''}`}>
               ↓
             </span>
           </button>
