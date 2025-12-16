@@ -13,7 +13,7 @@ body {
 }
 
 a {
-  @apply text-accent-blue hover:text-accent-teal transition-colors duration-200;
+  @apply text-accent-gold hover:text-accent-gold-hover transition-colors duration-200;
 }
 
 button {
