@@ -1,7 +1,7 @@
 [build]
   base = "apollo"
   command = "npm run build"
-  publish = "apollo/dist"
+  publish = "dist"
   
 [build.environment]
   NODE_VERSION = "18"
