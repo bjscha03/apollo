@@ -11,7 +11,7 @@ import './index.css';
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/">
       <div className="bg-dark-bg min-h-screen flex flex-col">
         <Navigation />
         <main className="flex-grow">
