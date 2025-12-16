@@ -2,13 +2,13 @@ export default function Navigation() {
   return (
     <nav className="bg-dark-bg border-b border-dark-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-28">
           <div className="flex items-center space-x-8">
             <a href="/" className="flex items-center hover:opacity-80 transition-opacity">
               <img 
                 src="https://res.cloudinary.com/dtrxl120u/image/upload/v1765923359/Apollo_Logo_Full_Gold_on_Black_wqe6oq.webp" 
                 alt="Apollo Health Logo" 
-                className="h-16 w-auto"
+                className="h-20 w-auto"
               />
             </a>
             <div className="hidden md:flex space-x-6">

@@ -12,8 +12,8 @@ export default {
         'dark-border': '#2a2a2a',
         'text-primary': '#ffffff',
         'text-secondary': '#b3b3b3',
-        'accent-gold': '#D4AF37',
-        'accent-gold-hover': '#F4D03F',
+        'accent-gold': '#DAA520',
+        'accent-gold-hover': '#E5B84A',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
