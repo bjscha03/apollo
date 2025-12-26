@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Design Your Banner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Design Your Banner</h1>
+    <label>Width (inches):</label>
+    <input type="number" id="width" value="36" />
+    <label>Height (inches):</label>
+    <input type="number" id="height" value="24" />
+    <label>Material:</label>
+    <select id="material">
+      <option value="3">13oz Vinyl ($3/sqft)</option>
+      <option value="4">15oz Vinyl ($4/sqft)</option>
+      <option value="6">HDP Weather Proof ($6/sqft)</option>
+      <option value="7">18oz Vinyl ($7/sqft)</option>
+      <option value="5">Mesh Fence Application ($5/sqft)</option>
+    </select>
+    <label>Grommets:</label>
+    <select id="grommets">
+      <option>None</option>
+      <option>4 Corners</option>
+      <option>Every 2 Feet</option>
+    </select>
+
+    <p id="price">Estimated Price: $0.00</p>
+
+    <div class="upload-area">
+      <label for="fileUpload" class="upload-btn">Upload Artwork</label>
+      <input type="file" id="fileUpload" accept=".jpg,.jpeg,.png,.pdf" />
+      <p class="file-types">Accepted file types: pdf, jpg, png.</p>
+    </div>
+
+    <h3>Preview</h3>
+    <div id="previewContainer"><img id="previewImage" /></div>
+
+    <button class="checkout-btn">Continue to Checkout</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
