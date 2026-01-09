@@ -69,8 +69,16 @@ export default function Home() {
     <div className="bg-dark-bg">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Background gradient effect */}
-        <div className="absolute inset-0 bg-gradient-to-br from-accent-gold/5 via-transparent to-transparent"></div>
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(https://res.cloudinary.com/dtrxl120u/image/upload/v1767994808/download_lkpjae.webp)',
+          }}
+        >
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-dark-bg/80"></div>
+        </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center max-w-4xl mx-auto">
