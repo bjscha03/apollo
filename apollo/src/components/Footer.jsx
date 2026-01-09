@@ -20,7 +20,7 @@ export default function Footer() {
               {/* Social Links */}
               <div className="flex items-center space-x-4">
                 <a 
-                  href="https://www.linkedin.com/company/apollo-health-plans" 
+                  href="https://www.linkedin.com/showcase/apollo-health-plan/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-text-secondary hover:text-accent-gold transition-all duration-200 hover:scale-110"
