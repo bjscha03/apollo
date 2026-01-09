@@ -1,3 +1,114 @@
+import React from 'react';
+
+export default function TermsOfService() {
+  return (
+    <section className="min-h-screen bg-dark-bg py-20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
+            Terms of <span className="text-accent-gold">Service</span>
+          </h1>
+          <p className="text-text-secondary text-lg">
+            Last Updated: January 9, 2026
+          </p>
+        </div>
+
+        {/* Content Sections */}
+        <div className="space-y-8">
+          
+          {/* Agreement to Terms */}
+          <div>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">Agreement to Terms</h2>
+            <p className="text-text-secondary leading-relaxed">
+              By accessing or using Apollo Health Plans' services, website, or mobile applications, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our services. These Terms constitute a legally binding agreement between you and Apollo Health Plans.
+            </p>
+          </div>
+
+          {/* Eligibility */}
+          <div>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">Eligibility</h2>
+            <p className="text-text-secondary leading-relaxed mb-4">
+              To use our services, you must:
+            </p>
+            <ul className="list-disc list-inside text-text-secondary space-y-2 ml-4">
+              <li>Be at least 18 years of age or the age of majority in your jurisdiction</li>
+              <li>Have the legal capacity to enter into a binding contract</li>
+              <li>Reside in a state where Apollo Health Plans is licensed to operate</li>
+              <li>Provide accurate and complete information during enrollment</li>
+              <li>Comply with all applicable federal, state, and local laws</li>
+            </ul>
+          </div>
+
+          {/* Services Description */}
+          <div>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">Services Description</h2>
+            <p className="text-text-secondary leading-relaxed mb-4">
+              Apollo Health Plans provides health insurance coverage and related services, including:
+            </p>
+            <ul className="list-disc list-inside text-text-secondary space-y-2 ml-4">
+              <li>Medical, dental, and vision insurance coverage</li>
+              <li>Access to our network of healthcare providers</li>
+              <li>Prescription drug coverage</li>
+              <li>Preventive care services</li>
+              <li>Member portal and mobile app access</li>
+              <li>Customer support and care coordination</li>
+            </ul>
+            <p className="text-text-secondary leading-relaxed mt-4">
+              Specific coverage details, limitations, and exclusions are outlined in your plan documents and Summary of Benefits and Coverage (SBC).
+            </p>
+          </div>
+
+          {/* User Responsibilities */}
+          <div>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">User Responsibilities</h2>
+            <p className="text-text-secondary leading-relaxed mb-4">
+              As a member, you agree to:
+            </p>
+            <ul className="list-disc list-inside text-text-secondary space-y-2 ml-4">
+              <li>Provide accurate and truthful information during enrollment and throughout your membership</li>
+              <li>Pay all premiums, deductibles, copayments, and coinsurance on time</li>
+              <li>Use services only for lawful purposes and in accordance with plan guidelines</li>
+              <li>Notify us promptly of any changes to your contact information or eligibility status</li>
+              <li>Maintain the confidentiality of your account credentials</li>
+              <li>Not share your member ID or benefits with unauthorized individuals</li>
+              <li>Report any suspected fraud or misuse of benefits</li>
+            </ul>
+          </div>
+
+          {/* Enrollment and Coverage */}
+          <div>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">Enrollment and Coverage</h2>
+            <p className="text-text-secondary leading-relaxed">
+              Coverage begins on the effective date specified in your enrollment confirmation. You may enroll during open enrollment periods or qualify for special enrollment based on qualifying life events. We reserve the right to verify your eligibility and may request additional documentation. Coverage may be subject to waiting periods for certain services as outlined in your plan documents.
+            </p>
+          </div>
+
+          {/* Payment Terms */}
+          <div>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">Payment Terms</h2>
+            <p className="text-text-secondary leading-relaxed mb-4">
+              You are responsible for paying:
+            </p>
+            <ul className="list-disc list-inside text-text-secondary space-y-2 ml-4">
+              <li><strong>Premiums:</strong> Monthly payments due by the first of each month</li>
+              <li><strong>Deductibles:</strong> Annual amounts you must pay before coverage begins for certain services</li>
+              <li><strong>Copayments:</strong> Fixed amounts due at the time of service</li>
+              <li><strong>Coinsurance:</strong> Your percentage share of costs for covered services</li>
+            </ul>
+            <p className="text-text-secondary leading-relaxed mt-4">
+              Failure to pay premiums may result in coverage termination. We accept various payment methods including credit cards, debit cards, and electronic bank transfers.
+            </p>
+          </div>
+
+          {/* Intellectual Property */}
+          <div>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">Intellectual Property</h2>
+            <p className="text-text-secondary leading-relaxed">
+              All content on our website and mobile applications, including text, graphics, logos, images, and software, is the property of Apollo Health Plans or its licensors and is protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, modify, or create derivative works without our express written permission.
+            </p>
+          </div>
 
           {/* Privacy and Data Protection */}
           <div>
