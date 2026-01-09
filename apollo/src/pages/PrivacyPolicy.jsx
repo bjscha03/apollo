@@ -176,8 +176,6 @@ export default function PrivacyPolicy() {
             <div className="bg-dark-bg border border-dark-border rounded-lg p-6 space-y-2">
               <p className="text-text-primary font-semibold">Apollo Health Plans</p>
               <p className="text-text-secondary">Privacy Officer</p>
-              <p className="text-text-secondary">Email: privacy@apollohealth.com</p>
-              <p className="text-text-secondary">Phone: 1-800-APOLLO-1</p>
               <a href="/contact" className="inline-block text-accent-gold hover:text-accent-gold-hover transition-colors mt-4">
                 Contact Form →
               </a>
