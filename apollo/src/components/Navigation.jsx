@@ -38,7 +38,7 @@ export default function Navigation() {
             ))}
             <a 
               href="/contact" 
-              className="bg-accent-gold hover:bg-accent-gold-hover text-dark-bg font-semibold py-2 px-6 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-accent-gold/30"
+              className="bg-accent-gold hover:bg-accent-gold-hover text-dark-bg hover:text-dark-bg font-semibold py-2 px-6 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-accent-gold/30"
             >
               Contact
             </a>
@@ -80,7 +80,7 @@ export default function Navigation() {
               ))}
               <a 
                 href="/contact" 
-                className="bg-accent-gold hover:bg-accent-gold-hover text-dark-bg font-semibold py-3 px-6 rounded-lg transition-all duration-200 text-center"
+                className="bg-accent-gold hover:bg-accent-gold-hover text-dark-bg hover:text-dark-bg font-semibold py-3 px-6 rounded-lg transition-all duration-200 text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact

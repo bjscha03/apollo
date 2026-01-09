@@ -99,10 +99,10 @@ export default function Footer() {
               © {currentYear} Apollo Health Plans. All rights reserved.
             </p>
             <div className="flex items-center space-x-6 text-sm">
-              <a href="#" className="text-text-secondary hover:text-accent-gold transition-colors duration-200">
+              <a href="/privacy" className="text-text-secondary hover:text-accent-gold transition-colors duration-200">
                 Privacy Policy
               </a>
-              <a href="#" className="text-text-secondary hover:text-accent-gold transition-colors duration-200">
+              <a href="/terms" className="text-text-secondary hover:text-accent-gold transition-colors duration-200">
                 Terms of Service
               </a>
             </div>

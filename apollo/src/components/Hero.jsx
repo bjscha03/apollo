@@ -11,7 +11,7 @@ export default function Hero({ headline, subheadline, cta = "Get Started" }) {
           </p>
         )}
         {cta && (
-          <button className="bg-accent-gold hover:bg-accent-gold-hover text-dark-bg font-semibold py-4 px-8 rounded-lg transition-all duration-200 text-lg">
+          <button className="bg-accent-gold hover:bg-accent-gold-hover text-dark-bg hover:text-dark-bg font-semibold py-4 px-8 rounded-lg transition-all duration-200 text-lg">
             {cta}
           </button>
         )}
