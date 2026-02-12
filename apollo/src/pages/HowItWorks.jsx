@@ -22,7 +22,7 @@ export default function HowItWorks() {
     },
     {
       title: 'Great Care Access',
-      description: 'Employees get access to PPO networks, 24/7 virtual care, and $0–$25 visits with Healthcare2U direct primary care.',
+      description: 'Employers get access to PPO network, 24/7 virtual care, and direct primary care at no cost to the member.',
       icon: (
         <svg className="w-12 h-12 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -34,7 +34,7 @@ export default function HowItWorks() {
   const features = [
     'Multiple deductible options and PPO networks',
     'Concierge-Level Navigation of Care',
-    'Transparent pharmacy benefits with TrueScripts',
+    'Transparent pharmacy benefits',
     'Unlimited virtual care + chronic condition management',
     'Bundled Pricing for Surgical Procedures',
     'Legal and patient advocacy support (optional RBP)'
@@ -42,7 +42,7 @@ export default function HowItWorks() {
 
   const partners = [
     {
-      name: 'Skyward',
+      name: 'Zenith',
       role: 'Medical Plan Underwriter',
       description: 'Industry-leading underwriting and risk management',
       icon: (
@@ -52,9 +52,9 @@ export default function HowItWorks() {
       )
     },
     {
-      name: 'TrueScripts',
-      role: 'Transparent PBM',
-      description: 'Real-time tools and transparent pharmacy benefits',
+      name: 'Transparent PBM',
+      role: 'Transparent pharmacy benefits',
+      description: 'Multiple transparent PBMs (EHN / Unity)',
       icon: (
         <svg className="w-8 h-8 text-dark-bg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />

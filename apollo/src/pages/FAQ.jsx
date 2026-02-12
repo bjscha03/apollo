@@ -56,7 +56,7 @@ export default function FAQ() {
     { 
       category: 'members',
       title: 'What are the copays for primary care?', 
-      content: 'Apollo members enjoy $0 copays for primary care and urgent care visits through Healthcare2U. This includes unlimited visits with no out-of-pocket costs, making it easy and affordable to get the care you need.' 
+      content: 'Apollo members enjoy primary care and urgent care visits at no cost. This includes unlimited visits with no out-of-pocket costs, making it easy and affordable to get the care you need.' 
     },
     { 
       category: 'members',

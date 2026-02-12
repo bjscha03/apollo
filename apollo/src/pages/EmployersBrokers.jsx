@@ -11,8 +11,8 @@ export default function EmployersBrokers() {
       content: 'If your group experiences a healthy year, you keep the unused claims fund — gaining underwriting profit and reward.' 
     },
     { 
-      title: 'Direct Primary Care Included', 
-      content: 'Healthcare2U access with $0–$25 visits.' 
+      title: 'Virtual and In-Person Care', 
+      content: 'Virtual and in-person visits at no cost.' 
     },
     { 
       title: 'Concierge Support Built In', 
