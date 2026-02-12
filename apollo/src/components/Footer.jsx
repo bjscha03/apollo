@@ -65,9 +65,6 @@ export default function Footer() {
                 <a href="/employers" className="text-text-secondary hover:text-accent-gold transition-colors duration-200 text-sm hover:translate-x-1 inline-block">
                   Employers & Brokers
                 </a>
-                <a href="/contact" className="text-text-secondary hover:text-accent-gold transition-colors duration-200 text-sm hover:translate-x-1 inline-block">
-                  Contact Us
-                </a>
               </nav>
             </div>
 

@@ -4,6 +4,7 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
+    { href: '/', label: 'Home' },
     { href: '/how-it-works', label: 'How It Works' },
     { href: '/employers', label: 'For Employers & Brokers' },
     { href: '/member-experience', label: 'Member Experience' },
