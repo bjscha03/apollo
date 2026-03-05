@@ -3,8 +3,8 @@ import Accordion from '../components/Accordion';
 export default function EmployersBrokers() {
   const items = [
     { 
-      title: 'Only 10 Employees Required', 
-      content: 'Unlike traditional captive health plans designed for massive corporations, Apollo was built to serve small and midsize groups.' 
+      title: '10–199 Employees', 
+      content: 'Unlike traditional captive health plans designed for massive corporations, Apollo was built to serve small and midsize groups with a maximum of 199 employees.' 
     },
     { 
       title: 'Keep the Savings When Claims Are Low', 

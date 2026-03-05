@@ -26,7 +26,7 @@ export default function FAQ() {
     { 
       category: 'employers',
       title: 'Who is Apollo Health best suited for?', 
-      content: 'Apollo Health is designed for small to mid-sized employers (10+ employees) seeking high-quality benefits without traditional insurance markup or renewal volatility. We\'re perfect for forward-thinking companies that want to offer exceptional benefits while controlling costs.' 
+      content: 'Apollo Health is designed for small to mid-sized employers (10–199 employees) seeking high-quality benefits without traditional insurance markup or renewal volatility. We\'re perfect for forward-thinking companies that want to offer exceptional benefits while controlling costs.' 
     },
     { 
       category: 'employers',
@@ -36,7 +36,7 @@ export default function FAQ() {
     { 
       category: 'employers',
       title: 'How many employees do I need to qualify?', 
-      content: 'Unlike traditional captive health plans designed for massive corporations, Apollo was built to serve small and midsize groups. You only need 10 employees to qualify for our innovative health plan.' 
+      content: 'Unlike traditional captive health plans designed for massive corporations, Apollo was built to serve small and midsize groups. Apollo is designed for groups of 10 to 199 employees.' 
     },
     { 
       category: 'employers',
