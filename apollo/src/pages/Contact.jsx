@@ -1,38 +1,66 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+
+const INITIAL_FORM = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  phone: '',
+  company: '',
+  role: '',
+  inquiryType: '',
+  employeeCount: '',
+  message: '',
+};
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    company: '',
-    role: '',
-    inquiryType: '',
-    employeeCount: '',
-    message: '',
-  });
+  const [formData, setFormData] = useState(INITIAL_FORM);
+  const [status, setStatus] = useState('idle'); // idle | submitting | success | error
+  const [errorMsg, setErrorMsg] = useState('');
+  const submittingRef = useRef(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      company: '',
-      role: '',
-      inquiryType: '',
-      employeeCount: '',
-      message: '',
-    });
-    alert('Thank you for your interest! We will be in touch soon.');
+    if (submittingRef.current) return; // prevent duplicate submissions
+
+    submittingRef.current = true;
+    setStatus('submitting');
+    setErrorMsg('');
+
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const payload = {
+        ...formData,
+        pageUrl: window.location.href,
+        utmSource: params.get('utm_source') || '',
+        utmMedium: params.get('utm_medium') || '',
+        utmCampaign: params.get('utm_campaign') || '',
+      };
+
+      const res = await fetch('/.netlify/functions/contact-submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || 'Something went wrong. Please try again.');
+      }
+
+      setFormData(INITIAL_FORM);
+      setStatus('success');
+    } catch (err) {
+      setErrorMsg(err.message || 'Unable to submit. Please try again later.');
+      setStatus('error');
+    } finally {
+      submittingRef.current = false;
+    }
   };
 
   return (
@@ -114,6 +142,17 @@ export default function Contact() {
               <h2 className="text-2xl font-bold text-text-primary mb-2">Send Us a Message</h2>
               <p className="text-text-secondary mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
               
+              {status === 'success' && (
+                <div className="mb-6 bg-green-900/30 border border-green-700 text-green-300 rounded-lg p-4 text-center">
+                  Thank you for your interest! We will be in touch soon.
+                </div>
+              )}
+              {status === 'error' && (
+                <div className="mb-6 bg-red-900/30 border border-red-700 text-red-300 rounded-lg p-4 text-center">
+                  {errorMsg}
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Fields */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -284,9 +323,10 @@ export default function Contact() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-accent-gold hover:bg-accent-gold/90 text-dark-bg hover:text-dark-bg font-semibold py-4 rounded-lg transition-all duration-200 text-lg shadow-lg hover:shadow-accent-gold/20 hover:scale-[1.02] active:scale-[0.98]"
+                  disabled={status === 'submitting'}
+                  className="w-full bg-accent-gold hover:bg-accent-gold/90 text-dark-bg hover:text-dark-bg font-semibold py-4 rounded-lg transition-all duration-200 text-lg shadow-lg hover:shadow-accent-gold/20 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
-                  Send Message
+                  {status === 'submitting' ? 'Sending…' : 'Send Message'}
                 </button>
 
                 <p className="text-text-secondary text-sm text-center">
