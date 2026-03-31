@@ -1,10 +1,16 @@
 import { neon } from '@neondatabase/serverless';
+import { Resend } from 'resend';
+import {
+  renderApolloInternalEmail,
+  renderApolloCustomerEmail,
+} from './email-templates.js';
 
 /**
  * Netlify Function – POST /.netlify/functions/contact-submit
  *
  * Accepts a JSON body from the contact form, validates it,
- * and inserts a row into the contact_submissions table in Neon.
+ * inserts a row into the contact_submissions table in Neon,
+ * and sends notification emails via Resend.
  */
 
 const REQUIRED_FIELDS = ['firstName', 'lastName', 'email', 'phone', 'inquiryType', 'message'];
@@ -116,6 +122,43 @@ export async function handler(event) {
         ${(body.utmCampaign || '').trim() || null}
       )
     `;
+
+    // --- Send emails via Resend (best-effort; do not fail the request) ---
+    try {
+      const resendApiKey = process.env.RESEND_API_KEY;
+      if (resendApiKey) {
+        const resend = new Resend(resendApiKey);
+
+        const senderAddress = 'Apollo <info@apollobybrandall.com>';
+        const internalTo = 'info@apollobybrandall.com';
+        const internalCc = 'brandon.schaefer@hotmail.com';
+        const customerTo = body.email.trim().toLowerCase();
+
+        await Promise.allSettled([
+          // A. Internal notification email
+          resend.emails.send({
+            from: senderAddress,
+            to: internalTo,
+            cc: internalCc,
+            subject: 'New Form Submission – Apollo',
+            html: renderApolloInternalEmail(body),
+          }),
+
+          // B. Customer confirmation email
+          resend.emails.send({
+            from: senderAddress,
+            to: customerTo,
+            subject: 'We received your request',
+            html: renderApolloCustomerEmail(body),
+          }),
+        ]);
+      } else {
+        console.warn('RESEND_API_KEY is not set – skipping emails.');
+      }
+    } catch (emailErr) {
+      // Log but do not fail the response since the DB write succeeded.
+      console.error('Email send error:', emailErr);
+    }
 
     return {
       statusCode: 200,
